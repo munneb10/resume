@@ -1,0 +1,244 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Muneeb Arif — Software Engineer (Android & Frontend)</title>
+<style>
+  /* Base / layout */
+  :root{
+    --bg:#0b1220;
+    --card:#0f1724;
+    --muted:#9aa7bb;
+    --accent:#38bdf8;
+    --glass: rgba(255,255,255,0.04);
+  }
+  html,body{height:100%;margin:0;background:linear-gradient(180deg,#050613 0%, #071228 100%);font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial;color:#e6eef6}
+  .wrap{max-width:980px;margin:36px auto;padding:28px;display:grid;grid-template-columns:1fr;gap:22px}
+  .card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));border-radius:14px;padding:22px;border:1px solid rgba(56,189,248,0.06);box-shadow:0 8px 30px rgba(11,95,255,0.06)}
+  header{display:flex;align-items:center;gap:18px;flex-wrap:wrap}
+  .avatar{
+    width:96px;height:96px;border-radius:14px;flex:0 0 96px;background:linear-gradient(135deg,var(--accent),#60a5fa);display:flex;align-items:center;justify-content:center;font-weight:700;color:#061226;font-size:28px;box-shadow:0 6px 24px rgba(56,189,248,0.12)
+  }
+  .meta{flex:1;min-width:210px}
+  h1{margin:0;font-size:26px;color:var(--accent);letter-spacing:0.4px}
+  .tag{margin-top:6px;color:var(--muted);font-size:13px}
+  .contact{margin-top:10px;color:var(--muted);font-size:13px;display:flex;gap:12px;flex-wrap:wrap}
+  a.contact-link{color:var(--muted);text-decoration:none}
+  a.contact-link:hover{color:var(--accent)}
+
+  /* Two column layout for content */
+  .grid{display:grid;grid-template-columns: 1fr 340px;gap:22px}
+  @media (max-width:900px){.grid{grid-template-columns:1fr}}
+
+  /* Left column */
+  .section{margin-bottom:14px}
+  .section h2{margin:0 0 10px 0;color:#d6eefb;font-size:13px;text-transform:uppercase;letter-spacing:1px;border-left:4px solid var(--accent);padding-left:12px}
+  p,li{color:#e6eef6}
+  ul{margin:8px 0 0 18px;padding:0}
+
+  /* Right column */
+  aside.card.side{padding:18px;position:sticky;top:28px;height:max-content}
+  .skills{display:flex;flex-wrap:wrap;gap:8px;margin-top:8px}
+  .skill{background:var(--glass);color:var(--accent);padding:6px 10px;border-radius:999px;font-size:13px;border:1px solid rgba(56,189,248,0.06)}
+  .small{color:var(--muted);font-size:13px}
+
+  /* projects & experience */
+  .job{background:rgba(255,255,255,0.02);padding:12px;border-radius:10px;margin-bottom:10px;border-left:3px solid rgba(56,189,248,0.06)}
+  .job h3{margin:0;font-size:15px;color:var(--accent)}
+  .job .meta{font-size:13px;color:var(--muted);margin-top:6px}
+  .bullets{margin-top:8px}
+  .bullets li{margin-bottom:6px;color:#dfeaf6;font-size:14px}
+
+  /* subtle animations */
+  .avatar, .card{transition:transform .28s ease, box-shadow .28s ease}
+  .card:hover{transform:translateY(-4px)}
+  .skill:hover{transform:scale(1.04)}
+
+  /* footer */
+  .footer{margin-top:18px;text-align:center;color:var(--muted);font-size:13px}
+  /* Print-friendly tweaks */
+  @media print{
+    body, .wrap{background:white;color:black}
+    .avatar{background:#ddd;color:#000}
+    .card{box-shadow:none;border:none}
+    .side{position:static}
+  }
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <!-- Header -->
+    <div class="card" role="banner">
+      <header>
+        <div class="avatar" aria-hidden="true">MA</div>
+        <div class="meta">
+          <h1>Muneeb Arif</h1>
+          <div class="tag">Software Engineer | Android & Frontend Development | Stockholm, Sweden</div>
+          <div class="contact" aria-label="contact info">
+            <div class="small">📧 <a class="contact-link" href="mailto:munnebsheikh10@gmail.com">munnebsheikh10@gmail.com</a></div>
+            <div class="small">📱 +46 70 000 0000</div>
+            <div class="small">🔗 <a class="contact-link" href="https://github.com/munneb10" target="_blank" rel="noopener">github.com/munneb10</a></div>
+            <div class="small">🔗 <a class="contact-link" href="http://www.muneebarif.tech" target="_blank" rel="noopener">muneebarif.tech</a></div>
+            <div class="small">🔗 <a class="contact-link" href="https://www.linkedin.com/in/muneeb-arif-555981173/" target="_blank" rel="noopener">linkedin.com/in/muneeb-arif</a></div>
+          </div>
+        </div>
+      </header>
+    </div>
+
+    <!-- Content grid -->
+    <div class="grid">
+      <!-- Left: full content -->
+      <main>
+        <!-- Profile -->
+        <section class="card section" id="profile" aria-labelledby="profile-heading">
+          <h2 id="profile-heading">Profile</h2>
+          <p>
+            Software Engineer with ~3 years of professional experience building front-end and mobile applications and end-to-end systems. Strong in <strong>Kotlin/Java (Android)</strong>, <strong>Flutter/Dart</strong>, <strong>React</strong>, and modern frontend stacks (TypeScript, Angular). I combine a product-focused mindset with engineering discipline — writing maintainable code, automating delivery, and optimizing performance. Based in Stockholm and open to hybrid/onsite roles.
+          </p>
+        </section>
+
+        <!-- Experience -->
+        <section class="card section" id="experience" aria-labelledby="experience-heading">
+          <h2 id="experience-heading">Professional Experience</h2>
+
+          <article class="job" aria-labelledby="job1">
+            <h3 id="job1">Front-End Engineer — CellTech Inc (Remote, USA)</h3>
+            <div class="meta">Feb 2024 – Present</div>
+            <ul class="bullets">
+              <li>Built modular Angular and React components used by >1,000 users; improved perceived load times by ~20% through lazy-loading and data-fetching improvements.</li>
+              <li>Designed stateful flows with RxJS and client-side caching for resilient UIs and smoother offline behaviour.</li>
+              <li>Collaborated closely with backend engineers on REST API contracts, GraphQL adoption experiments, and CI/CD integration using GitHub Actions.</li>
+              <li>Introduced unit and integration testing practices, and participated actively in code reviews and sprint planning.</li>
+            </ul>
+          </article>
+
+          <article class="job" aria-labelledby="job2">
+            <h3 id="job2">Mobile Developer Intern — Higher Education Commission (HEC), Islamabad</h3>
+            <div class="meta">Jul 2023 – Sep 2023</div>
+            <ul class="bullets">
+              <li>Built an e-tendering mobile system in <strong>Flutter & Dart</strong> supporting secure vendor bidding workflows and state management with BLoC.</li>
+              <li>Implemented authentication, transaction handling and API integrations; improved UI stability and reduced errors through thorough testing.</li>
+              <li>Gained hands-on knowledge of native Android lifecycle, platform constraints, and performance tuning for resource-limited devices.</li>
+            </ul>
+          </article>
+
+          <article class="job" aria-labelledby="job3">
+            <h3 id="job3">Freelance Full-Stack Developer — Fiverr</h3>
+            <div class="meta">Dec 2019 – May 2020 (ongoing freelance projects)</div>
+            <ul class="bullets">
+              <li>Delivered 10+ full-stack applications (React/Node.js, SQL, MongoDB) for clients worldwide — responsible for UI, backend API, and deployment.</li>
+              <li>Built RESTful services, role-based authentication, and payment integrations; optimized queries and introduced caching strategies to reduce latency.</li>
+              <li>Maintained CI/CD pipelines and Docker-based deployments for consistent environments between staging and production.</li>
+            </ul>
+          </article>
+        </section>
+
+        <!-- Projects -->
+        <section class="card section" id="projects" aria-labelledby="projects-heading">
+          <h2 id="projects-heading">Selected Projects & Technical Highlights</h2>
+
+          <article class="job">
+            <h3>Real-Time Chat Application — React, Socket.io, Docker</h3>
+            <div class="meta">Realtime messaging & scaling</div>
+            <ul class="bullets">
+              <li>Built a scalable chat system supporting 1:1 and group messaging with presence and typing indicators.</li>
+              <li>Used Socket.io with WebSockets for low-latency events and deployed via Docker with CI/CD pipelines for continuous delivery.</li>
+            </ul>
+          </article>
+
+          <article class="job">
+            <h3>Video Calling Platform — React, WebRTC, Node.js</h3>
+            <div class="meta">P2P low-latency calls</div>
+            <ul class="bullets">
+              <li>Implemented peer-to-peer WebRTC calls with a Node.js signaling server and robust session handling for multi-user sessions.</li>
+              <li>Instrumented error handling and connection recovery for unstable networks.</li>
+            </ul>
+          </article>
+
+          <article class="job">
+            <h3>Mobile E-commerce App (Frontend) — Flutter, Dart, BLoC</h3>
+            <div class="meta">Cross-platform commerce experience</div>
+            <ul class="bullets">
+              <li>Built checkout flows, secure login, and product listing with optimized UI and offline-friendly patterns.</li>
+              <li>Focused on performance, accessibility, and consistent UX across Android/iOS.</li>
+            </ul>
+          </article>
+
+          <article class="job">
+            <h3>High-Performance Log Analyzer (C++ / DevOps)</h3>
+            <div class="meta">Systems & tooling (personal / academic)</div>
+            <ul class="bullets">
+              <li>Developed a multithreaded log analyzer in C++17 using async I/O and efficient memory patterns; containerized with Docker and integrated into CI for automated builds.</li>
+              <li>Benchmarked and optimized parsing throughput; used Prometheus for runtime metrics and Grafana for dashboards.</li>
+            </ul>
+          </article>
+        </section>
+
+        <!-- Approach -->
+        <section class="card section" id="approach" aria-labelledby="approach-heading">
+          <h2 id="approach-heading">How I Work — engineering principles</h2>
+          <ul class="bullets">
+            <li><strong>Product-first</strong>: ship incremental value, learn from users and telemetry (Amplitude / analytics) and iterate fast.</li>
+            <li><strong>Quality & testing</strong>: unit + integration + E2E (Jest, RTL, Playwright) to reduce regressions and increase confidence.</li>
+            <li><strong>Performance-aware</strong>: optimise LCP/TTI, code-splitting, critical CSS and efficient data fetching (SSR/ISR in Next.js; caching).</li>
+            <li><strong>Collaboration</strong>: transparent PRs, constructive reviews, documentation and pairing to raise team standards.</li>
+          </ul>
+        </section>
+
+        <!-- Availability & note to recruiter -->
+        <section class="card section" id="availability" aria-labelledby="availability-heading">
+          <h2 id="availability-heading">Availability</h2>
+          <p class="small">Based in Stockholm, Sweden — open to hybrid or onsite roles. Available to start / discuss assignments immediately. Happy to follow up with tailored references and code samples or a short technical task.</p>
+        </section>
+      </main>
+
+      <!-- Right: sidebar -->
+      <aside class="card side" aria-labelledby="sidebar-heading">
+        <h2 id="sidebar-heading">Core Skills</h2>
+        <div class="skills" role="list">
+          <span class="skill">Android (Kotlin/Java)</span>
+          <span class="skill">Flutter / Dart</span>
+          <span class="skill">React / TypeScript</span>
+          <span class="skill">Angular</span>
+          <span class="skill">Node.js / Express</span>
+          <span class="skill">REST / GraphQL</span>
+          <span class="skill">Docker</span>
+          <span class="skill">CI/CD (GitHub Actions)</span>
+          <span class="skill">Testing (Jest/Playwright)</span>
+          <span class="skill">PostgreSQL / MongoDB</span>
+          <span class="skill">Linux</span>
+          <span class="skill">C++ / Systems</span>
+        </div>
+
+        <div style="height:12px"></div>
+
+        <h2>Education & Certifications</h2>
+        <p class="small"><strong>M.Sc. Computer & Systems Sciences</strong> (ongoing) — Stockholm University</p>
+        <p class="small"><strong>B.S. Software Engineering</strong> — Arid University, Rawalpindi</p>
+        <div style="height:8px"></div>
+        <p class="small"><strong>Certifications</strong>: AWS Cloud Technical Essentials; Architecting Solutions on AWS; Docker Essentials (IBM)</p>
+
+        <div style="height:12px"></div>
+
+        <h2>Honors & Impact</h2>
+        <ul class="bullets">
+          <li>Top 0.4% on LeetCode (300+ day streak) — disciplined problem solving.</li>
+          <li>Delivered production features and freelance projects with measurable performance improvements.</li>
+        </ul>
+
+        <div style="height:12px"></div>
+
+        <h2>Links</h2>
+        <p class="small">GitHub: <a class="contact-link" href="https://github.com/munneb10" target="_blank" rel="noopener">github.com/munneb10</a></p>
+        <p class="small">Portfolio: <a class="contact-link" href="http://www.muneebarif.tech" target="_blank" rel="noopener">muneebarif.tech</a></p>
+        <p class="small">LinkedIn: <a class="contact-link" href="https://www.linkedin.com/in/muneeb-arif-555981173/" target="_blank" rel="noopener">linkedin.com/in/muneeb-arif</a></p>
+      </aside>
+    </div>
+
+    <div class="footer card">
+      <div class="small">If you'd like a tailored version (one-page PDF for Bianca / Academic Work), I can create it instantly — include preferred phone/email and I’ll export it for you.</div>
+    </div>
+  </div>
+</body>
+</html>
